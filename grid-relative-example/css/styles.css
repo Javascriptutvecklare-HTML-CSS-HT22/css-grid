@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header, aside, main {
+    background-color: #93f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 120px;
+    gap: 1rem;
+}
+
+header {
+    /* auto = följ css-flödet alltså utgår från där elementet är nu 
+    och spänner över 6 kolumner */
+    grid-column: auto / span 6;
+}
+
+main {
+    grid-column: auto / span 4;
+    grid-row: auto / span 4;
+}
+
+aside {
+    grid-column: auto / span 2;
+    grid-row: auto / span 4;
+}

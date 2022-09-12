@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header, aside, main {
+    background-color: #93f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px auto;
+    gap: 1rem;
+    grid-template-areas: 
+    "header header header header header header"
+    "main main main main aside aside";
+    /* Punkt (.) används när du inte vill populera en viss kolumn */
+}
+
+.wrapper header {
+    grid-area: header;
+}
+
+.wrapper main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.wrapper aside {
+    grid-area: aside;
+}
